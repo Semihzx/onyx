@@ -57,6 +57,8 @@ from onyx.tools.tool_implementations.images.image_generation_tool import (
 from onyx.tools.tool_implementations.mcp.mcp_tool import MCPTool
 from onyx.tools.tool_implementations.memory.memory_tool import MemoryTool
 from onyx.tools.tool_implementations.open_url.open_url_tool import OpenURLTool
+from onyx.tools.tool_implementations.postgres.postgres_tool import PostgresTool
+from onyx.tools.tool_implementations.postgres.scope import build_document_scope
 from onyx.tools.tool_implementations.python.python_tool import PythonTool
 from onyx.tools.tool_implementations.search.search_tool import SearchTool
 from onyx.tools.tool_implementations.web_search.web_search_tool import WebSearchTool
@@ -420,6 +422,38 @@ def _construct_tools_impl(
                         tool_id=db_tool_model.id,
                         user_file_ids=cfg.user_file_ids,
                         chat_file_ids=cfg.chat_file_ids,
+                    )
+                ]
+
+            # Handle Postgres Query Tool
+            elif tool_cls.__name__ == PostgresTool.__name__:
+                tool_dict[db_tool_model.id] = [
+                    PostgresTool(
+                        tool_id=db_tool_model.id,
+                        user=user,
+                        current_chat_session_id=(
+                            custom_tool_config.chat_session_id
+                            if custom_tool_config
+                            else None
+                        ),
+                        scope=build_document_scope(
+                            persona_search=configuration.search,
+                            user_selected_filters=(
+                                search_tool_config.user_selected_filters
+                                if search_tool_config
+                                else None
+                            ),
+                            project_id_filter=(
+                                search_tool_config.project_id_filter
+                                if search_tool_config
+                                else None
+                            ),
+                            persona_id_filter=(
+                                search_tool_config.persona_id_filter
+                                if search_tool_config
+                                else None
+                            ),
+                        ),
                     )
                 ]
 
