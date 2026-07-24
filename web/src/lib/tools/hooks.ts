@@ -26,6 +26,7 @@ import {
   IMAGE_GENERATION_TOOL_ID,
   KNOWLEDGE_GRAPH_TOOL_ID,
   MEMORY_TOOL_ID,
+  POSTGRES_TOOL_ID,
   OPEN_URL_TOOL_ID,
   PYTHON_TOOL_ID,
   SEARCH_TOOL_ID,
@@ -875,6 +876,7 @@ export function useBuiltInToolNames(): Record<string, string> {
       [FILE_READER_TOOL_ID]: t("toolNames.fileReader.label"),
       [MEMORY_TOOL_ID]: t("toolNames.addMemory.label"),
       [CODING_AGENT_TOOL_ID]: t("toolNames.codingAgent.label"),
+      [POSTGRES_TOOL_ID]: t("toolNames.knowledgeBaseQuery.label"),
     }),
     [t]
   );

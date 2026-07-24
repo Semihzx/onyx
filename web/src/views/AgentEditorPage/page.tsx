@@ -46,6 +46,7 @@ import {
   SEARCH_TOOL_ID,
   OPEN_URL_TOOL_ID,
   CODING_AGENT_TOOL_ID,
+  POSTGRES_TOOL_ID,
 } from "@/lib/tools/constants";
 import { Collapsible, Text } from "@opal/components";
 import { InputSwitchField } from "@opal/form";
@@ -560,6 +561,9 @@ export default function AgentEditorPage({
   const codingAgentTool = availableTools?.find(
     (t) => t.in_code_tool_id === CODING_AGENT_TOOL_ID
   );
+  const knowledgeBaseQueryTool = availableTools?.find(
+    (t) => t.in_code_tool_id === POSTGRES_TOOL_ID
+  );
   const isImageGenerationAvailable = !!imageGenTool;
   const imageGenerationDisabledTooltip = isImageGenerationAvailable
     ? undefined
@@ -666,6 +670,12 @@ export default function AgentEditorPage({
       !!codingAgentTool &&
       (existingAgent?.tools?.some(
         (tool) => tool.in_code_tool_id === CODING_AGENT_TOOL_ID
+      ) ??
+        false),
+    knowledge_base_query:
+      !!knowledgeBaseQueryTool &&
+      (existingAgent?.tools?.some(
+        (tool) => tool.in_code_tool_id === POSTGRES_TOOL_ID
       ) ??
         false),
     // MCP servers - dynamically add fields for each server with nested tool fields
@@ -815,6 +825,9 @@ export default function AgentEditorPage({
       }
       if (values.coding_agent && codingAgentTool) {
         toolIds.push(codingAgentTool.id);
+      }
+      if (values.knowledge_base_query && knowledgeBaseQueryTool) {
+        toolIds.push(knowledgeBaseQueryTool.id);
       }
 
       // Collect enabled MCP tool IDs
@@ -1612,6 +1625,26 @@ export default function AgentEditorPage({
                                 <InputSwitchField
                                   name="coding_agent"
                                   disabled={!codingAgentTool}
+                                />
+                              </InputHorizontal>
+                            </Card>
+                          </Disabled>
+
+                          <Disabled disabled={!knowledgeBaseQueryTool}>
+                            <Card border="solid" rounding={4}>
+                              <InputHorizontal
+                                withLabel="knowledge_base_query"
+                                title={t(
+                                  "editor.actions.knowledgeBaseQuery.title"
+                                )}
+                                description={t(
+                                  "editor.actions.knowledgeBaseQuery.description"
+                                )}
+                                disabled={!knowledgeBaseQueryTool}
+                              >
+                                <InputSwitchField
+                                  name="knowledge_base_query"
+                                  disabled={!knowledgeBaseQueryTool}
                                 />
                               </InputHorizontal>
                             </Card>

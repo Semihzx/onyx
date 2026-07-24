@@ -5,6 +5,7 @@ import {
   SvgImage,
   SvgLink,
   SvgSearch,
+  SvgServer,
   SvgTerminal,
 } from "@opal/icons";
 
@@ -25,6 +26,7 @@ export const FILE_READER_TOOL_ID = "FileReaderTool";
 export const CODING_AGENT_TOOL_ID = "CodingAgentTool";
 export const KNOWLEDGE_GRAPH_TOOL_ID = "KnowledgeGraphTool";
 export const MEMORY_TOOL_ID = "MemoryTool";
+export const POSTGRES_TOOL_ID = "PostgresTool";
 
 // Icon mappings for system tools
 export const SYSTEM_TOOL_ICONS: Record<
@@ -37,6 +39,7 @@ export const SYSTEM_TOOL_ICONS: Record<
   [PYTHON_TOOL_ID]: SvgTerminal,
   [OPEN_URL_TOOL_ID]: SvgLink,
   [CODING_AGENT_TOOL_ID]: SvgCpu,
+  [POSTGRES_TOOL_ID]: SvgServer,
 };
 
 import { ADMIN_ROUTES } from "@/lib/admin-routes";

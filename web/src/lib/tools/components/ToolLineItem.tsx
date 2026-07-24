@@ -21,6 +21,7 @@ import { useProjectsContext } from "@/lib/projects/providers";
 import { useSettings } from "@/lib/settings/hooks";
 import {
   CODING_AGENT_TOOL_ID,
+  POSTGRES_TOOL_ID,
   IMAGE_GENERATION_TOOL_ID,
   PYTHON_TOOL_ID,
   SEARCH_TOOL_ID,
@@ -91,6 +92,9 @@ export default function ToolLineItem({ tool }: ToolLineItemProps) {
         [PYTHON_TOOL_ID]: t("toolsPopover.tooltips.python.description"),
         [CODING_AGENT_TOOL_ID]: t(
           "toolsPopover.tooltips.codingAgent.description"
+        ),
+        [POSTGRES_TOOL_ID]: t(
+          "toolsPopover.tooltips.knowledgeBaseQuery.description"
         ),
       },
       defaultDescription: t("toolsPopover.tooltips.default.description"),

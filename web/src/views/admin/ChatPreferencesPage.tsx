@@ -36,6 +36,7 @@ import {
   PYTHON_TOOL_ID,
   OPEN_URL_TOOL_ID,
   CODING_AGENT_TOOL_ID,
+  POSTGRES_TOOL_ID,
 } from "@/lib/tools/constants";
 import {
   EmptyMessageCard,
@@ -304,6 +305,9 @@ export default function ChatPreferencesPage() {
   );
   const codingAgentTool = availableTools.find(
     (t) => t.in_code_tool_id === CODING_AGENT_TOOL_ID
+  );
+  const knowledgeBaseQueryTool = availableTools.find(
+    (t) => t.in_code_tool_id === POSTGRES_TOOL_ID
   );
 
   // Connectors
@@ -748,6 +752,35 @@ export default function ChatPreferencesPage() {
                                 void toggleTool(codingAgentTool.id, checked)
                               }
                               disabled={!codingAgentTool}
+                            />
+                          </InputHorizontal>
+                        </Card>
+                      </Disabled>
+
+                      <Disabled disabled={!knowledgeBaseQueryTool}>
+                        <Card border="solid" rounding={4}>
+                          <InputHorizontal
+                            title={t("tools.knowledgeBaseQuery.title")}
+                            description={t(
+                              "tools.knowledgeBaseQuery.description"
+                            )}
+                            disabled={!knowledgeBaseQueryTool}
+                            withLabel
+                          >
+                            <InputSwitch
+                              checked={
+                                knowledgeBaseQueryTool
+                                  ? isToolEnabled(knowledgeBaseQueryTool.id)
+                                  : false
+                              }
+                              onCheckedChange={(checked) =>
+                                knowledgeBaseQueryTool &&
+                                void toggleTool(
+                                  knowledgeBaseQueryTool.id,
+                                  checked
+                                )
+                              }
+                              disabled={!knowledgeBaseQueryTool}
                             />
                           </InputHorizontal>
                         </Card>

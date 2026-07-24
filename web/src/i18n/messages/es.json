@@ -776,6 +776,9 @@
       },
       "codingAgent": {
         "label": "Agente de código"
+      },
+      "knowledgeBaseQuery": {
+        "label": "Consulta de la base de conocimiento"
       }
     },
     "toolsPopover": {
@@ -851,6 +854,9 @@
         },
         "webSearch": {
           "description": "Busca en la web información actualizada."
+        },
+        "knowledgeBaseQuery": {
+          "description": "Cuenta y lista documentos por fuente, título, fecha, propietario o carpeta, y busca chats anteriores."
         }
       }
     },
@@ -2413,6 +2419,10 @@
         "webSearch": {
           "description": "Busca en la web información en tiempo real y resultados actualizados.",
           "title": "Búsqueda web"
+        },
+        "knowledgeBaseQuery": {
+          "description": "Cuenta y lista documentos por fuente, título, fecha, propietario o carpeta, y busca chats anteriores.",
+          "title": "Consulta de la base de conocimiento"
         }
       }
     },
@@ -11298,6 +11308,10 @@
         "webSearch": {
           "description": "Busca en la web información en tiempo real y resultados actualizados.",
           "title": "Búsqueda web"
+        },
+        "knowledgeBaseQuery": {
+          "description": "Cuenta y lista documentos por fuente, título, fecha, propietario o carpeta, y busca chats anteriores.",
+          "title": "Consulta de la base de conocimiento"
         }
       },
       "advanced": {
@@ -13110,6 +13124,9 @@
           "generatingPlan": {
             "label": "Generando plan"
           },
+          "queryingKnowledgeBase": {
+            "label": "Consultando la base de conocimiento"
+          },
           "reading": {
             "label": "Leyendo"
           },
@@ -13186,6 +13203,57 @@
           },
           "updated": {
             "label": "Memoria actualizada"
+          }
+        },
+        "postgres": {
+          "queried": {
+            "status": "Base de conocimiento consultada"
+          },
+          "querying": {
+            "status": "Consultando la base de conocimiento"
+          },
+          "listed": {
+            "label": "{count, plural, one {# documento listado} other {# documentos listados}}"
+          },
+          "query": {
+            "table": {
+              "document": "Documentos",
+              "hierarchy_node": "Carpetas",
+              "chat_session": "Sesiones de chat",
+              "chat_message": "Mensajes de chat",
+              "search_doc": "Documentos citados"
+            },
+            "count": "Recuento",
+            "countBy": {
+              "source": "Recuento por fuente",
+              "owner": "Recuento por propietario",
+              "month": "Recuento por mes"
+            },
+            "titleContains": "El título contiene «{text}»",
+            "nameContains": "El nombre contiene «{text}»",
+            "textContains": "El texto contiene «{text}»",
+            "updated": {
+              "since": "Actualizado desde {date}",
+              "before": "Actualizado antes del {date}",
+              "between": "Actualizado {start} – {end}"
+            },
+            "created": {
+              "since": "Creado desde {date}",
+              "before": "Creado antes del {date}",
+              "between": "Creado {start} – {end}"
+            },
+            "sent": {
+              "since": "Enviado desde {date}",
+              "before": "Enviado antes del {date}",
+              "between": "Enviado {start} – {end}"
+            },
+            "owner": "Propietario: {owner}",
+            "folder": "En la carpeta {id}",
+            "nodeType": "Tipo: {type}",
+            "author": "De: {author}",
+            "message": "Mensaje {id}",
+            "allRetrieved": "Todos los recuperados",
+            "nextPage": "Página siguiente"
           }
         },
         "python": {
@@ -13266,6 +13334,7 @@
           "generateImage": "Generar imagen",
           "generatePlan": "Generar plan",
           "internalSearch": "Búsqueda interna",
+          "knowledgeBaseQuery": "Consulta de la base de conocimiento",
           "memory": "Memoria",
           "openUrls": "Abrir URL",
           "researchAgent": "Agente de investigación",
