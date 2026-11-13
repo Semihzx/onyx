@@ -1,6 +1,5 @@
 "use client";
 
-import { TIMELINE_HEADER_ICON_PX } from "@/lib/timeline/components/primitives/tokens";
 import { useEffect, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import useSWR from "swr";
@@ -212,11 +211,7 @@ export default function BuildMessageList({
   // with a run.
   const renderLogoHeader = (key: string) => (
     <TimelineRoot key={key}>
-      <TimelineHeaderRow
-        left={
-          <FoldableLogo onyxBranded folded size={TIMELINE_HEADER_ICON_PX} />
-        }
-      />
+      <TimelineHeaderRow left={<FoldableLogo onyxBranded folded size={24} />} />
     </TimelineRoot>
   );
 
