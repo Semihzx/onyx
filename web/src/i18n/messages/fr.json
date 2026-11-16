@@ -13078,9 +13078,6 @@
             "status": "Génération du plan"
           }
         },
-        "doneStep": {
-          "header": "Terminé"
-        },
         "expandButton": {
           "ariaLabel": "Développer la chronologie"
         },
@@ -13258,9 +13255,6 @@
         },
         "stepsButton": {
           "label": "{count, plural, one {# étape} other {# étapes}}"
-        },
-        "stoppedStep": {
-          "header": "Arrêté"
         },
         "thoughtDuration": {
           "label": "A réfléchi pendant {duration}"
