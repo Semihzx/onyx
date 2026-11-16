@@ -12930,9 +12930,6 @@
         "emptyState": {
           "text": "Keine Bilder generiert"
         },
-        "failedStatus": {
-          "text": "Bildgenerierung fehlgeschlagen"
-        },
         "generatedStatus": {
           "text": "{count, plural, one {# Bild generiert} other {# Bilder generiert}}"
         },
@@ -13084,6 +13081,9 @@
         "fetch": {
           "reading": {
             "status": "Liest"
+          },
+          "read": {
+            "status": "Gelesen"
           }
         },
         "fileReader": {
@@ -13162,7 +13162,9 @@
           },
           "header": {
             "default": "Interne Dokumente werden durchsucht",
+            "doneDefault": "Interne Dokumente durchsucht",
             "sources": "Suche in {sources}",
+            "doneSources": "{sources} durchsucht",
             "sourcesOverflow": "{sources} +{count} weitere",
             "withTimeWindow": "{header} ({timeWindow})"
           },
@@ -13185,6 +13187,9 @@
           "updating": {
             "status": "Aktualisiert Erinnerung"
           },
+          "updated": {
+            "status": "Erinnerung aktualisiert"
+          },
           "viewMemoriesButton": {
             "tooltip": "Erinnerungen ansehen"
           }
@@ -13198,20 +13203,8 @@
           }
         },
         "python": {
-          "completed": {
-            "status": "Python-Ausführung abgeschlossen"
-          },
-          "default": {
-            "status": "Python-Ausführung"
-          },
           "error": {
             "label": "Fehler:"
-          },
-          "executing": {
-            "status": "Führt Python-Code aus..."
-          },
-          "failed": {
-            "status": "Python-Ausführung fehlgeschlagen"
           },
           "generatedFiles": {
             "label": "{count, plural, one {# Datei generiert} other {# Dateien generiert}}"
@@ -13221,6 +13214,12 @@
           },
           "output": {
             "label": "Ausgabe:"
+          },
+          "running": {
+            "status": "Python wird ausgeführt"
+          },
+          "ran": {
+            "status": "Python ausgeführt"
           },
           "runningCode": {
             "label": "Führt Code aus..."
@@ -13235,6 +13234,9 @@
           },
           "thinking": {
             "status": "Denkt nach"
+          },
+          "thought": {
+            "status": "Nachgedacht"
           }
         },
         "researchAgent": {
@@ -13286,6 +13288,9 @@
         "webSearch": {
           "searching": {
             "status": "Durchsucht das Web"
+          },
+          "searched": {
+            "status": "Im Web gesucht"
           }
         },
         "sandbox": {

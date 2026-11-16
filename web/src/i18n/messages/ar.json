@@ -12930,9 +12930,6 @@
         "emptyState": {
           "text": "لم يتم توليد صور"
         },
-        "failedStatus": {
-          "text": "فشل توليد الصورة"
-        },
         "generatedStatus": {
           "text": "{count, plural, one {تم توليد صورة واحدة} other {تم توليد # صور}}"
         },
@@ -13084,6 +13081,9 @@
         "fetch": {
           "reading": {
             "status": "جارٍ القراءة"
+          },
+          "read": {
+            "status": "تمت القراءة"
           }
         },
         "fileReader": {
@@ -13162,7 +13162,9 @@
           },
           "header": {
             "default": "جارٍ البحث في المستندات الداخلية",
+            "doneDefault": "تم البحث في المستندات الداخلية",
             "sources": "جارٍ البحث في {sources}",
+            "doneSources": "تم البحث في {sources}",
             "sourcesOverflow": "{sources} +{count} أخرى",
             "withTimeWindow": "{header} ({timeWindow})"
           },
@@ -13185,6 +13187,9 @@
           "updating": {
             "status": "جارٍ تحديث الذاكرة"
           },
+          "updated": {
+            "status": "تم تحديث الذاكرة"
+          },
           "viewMemoriesButton": {
             "tooltip": "عرض الذكريات"
           }
@@ -13198,20 +13203,8 @@
           }
         },
         "python": {
-          "completed": {
-            "status": "اكتمل تنفيذ Python"
-          },
-          "default": {
-            "status": "تنفيذ Python"
-          },
           "error": {
             "label": "خطأ:"
-          },
-          "executing": {
-            "status": "جارٍ تنفيذ كود Python..."
-          },
-          "failed": {
-            "status": "فشل تنفيذ Python"
           },
           "generatedFiles": {
             "label": "{count, plural, one {تم توليد ملف واحد} other {تم توليد # ملفات}}"
@@ -13221,6 +13214,12 @@
           },
           "output": {
             "label": "الإخراج:"
+          },
+          "running": {
+            "status": "جارٍ تشغيل Python"
+          },
+          "ran": {
+            "status": "تم تشغيل Python"
           },
           "runningCode": {
             "label": "جارٍ تشغيل الكود..."
@@ -13235,6 +13234,9 @@
           },
           "thinking": {
             "status": "جارٍ التفكير"
+          },
+          "thought": {
+            "status": "تم التفكير"
           }
         },
         "researchAgent": {
@@ -13286,6 +13288,9 @@
         "webSearch": {
           "searching": {
             "status": "جارٍ البحث في الويب"
+          },
+          "searched": {
+            "status": "تم البحث في الويب"
           }
         },
         "sandbox": {
