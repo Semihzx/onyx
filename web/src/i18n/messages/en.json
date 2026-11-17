@@ -13229,9 +13229,6 @@
           }
         },
         "reasoning": {
-          "fullText": {
-            "title": "Full text"
-          },
           "thinking": {
             "status": "Thinking"
           },

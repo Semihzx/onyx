@@ -13229,9 +13229,6 @@
           }
         },
         "reasoning": {
-          "fullText": {
-            "title": "全文"
-          },
           "thinking": {
             "status": "思考中"
           },
