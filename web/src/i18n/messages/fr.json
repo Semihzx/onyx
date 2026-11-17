@@ -13087,9 +13087,6 @@
           }
         },
         "fileReader": {
-          "charRange": {
-            "label": "caractères {start, number}–{end, number} sur {total, number}"
-          },
           "read": {
             "status": "A lu {fileName} (caractères {start, number}–{end, number} sur {total, number})"
           },

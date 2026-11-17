@@ -13087,9 +13087,6 @@
           }
         },
         "fileReader": {
-          "charRange": {
-            "label": "第 {start, number}–{end, number} 个字符，共 {total, number} 个"
-          },
           "read": {
             "status": "已读取 {fileName}（第 {start, number}–{end, number} 个字符，共 {total, number} 个）"
           },
