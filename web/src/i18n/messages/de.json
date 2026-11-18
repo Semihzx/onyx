@@ -15139,6 +15139,11 @@
         "label": "Nur empfohlene Modelle"
       }
     },
+    "messageList": {
+      "turnFailed": {
+        "message": "Der Durchlauf ist fehlgeschlagen."
+      }
+    },
     "onboarding": {
       "livingMap": {
         "examplePrompts": {

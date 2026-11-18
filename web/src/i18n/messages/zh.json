@@ -15139,6 +15139,11 @@
         "label": "仅显示推荐模型"
       }
     },
+    "messageList": {
+      "turnFailed": {
+        "message": "本轮失败。"
+      }
+    },
     "onboarding": {
       "livingMap": {
         "examplePrompts": {

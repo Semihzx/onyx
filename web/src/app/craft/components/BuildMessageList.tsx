@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo } from "react";
+import { useTranslations } from "next-intl";
 import useSWR from "swr";
 import { cn } from "@opal/utils";
 import { CopyButton } from "@opal/components";
@@ -96,6 +97,7 @@ export default function BuildMessageList({
   onTurnOutputsOpen,
   onFileOpen,
 }: BuildMessageListProps) {
+  const t = useTranslations("craft.messageList");
   const outputsByTurn = useMemo(() => {
     const groups = new Map<number, OutputCard[]>();
     for (const output of outputCards ?? []) {
@@ -389,7 +391,7 @@ export default function BuildMessageList({
               return renderError(
                 entry.id,
                 topMargin,
-                notice.message || "Turn failed.",
+                notice.message || t("turnFailed.message"),
                 notice.rateLimit
               );
           }
