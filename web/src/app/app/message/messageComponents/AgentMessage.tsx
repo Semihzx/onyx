@@ -642,7 +642,9 @@ const AgentMessage = React.memo(function AgentMessage({
                         }
                         toolProcessingDuration={toolProcessingDuration}
                         codeModeWorking={isLastSection && codeModeWorking}
-                        awaitingUser={isLastSection ? toolRequests.awaiting : null}
+                        awaitingUser={
+                          isLastSection ? toolRequests.awaiting : null
+                        }
                         showAgentAvatar={showAgentAvatar}
                       />
                     );
@@ -718,8 +720,9 @@ function packetTurn(group: TurnGroup): number {
 }
 
 /**
- * Lays out one response section the way Craft lays out a turn: steps, text
- * and approval and question cards in arrival (turn) order. Consecutive steps form one run.
+ * Lays out one response section the way Craft lays out a turn: steps, text,
+ * and approval and question cards in arrival (turn) order. Consecutive steps
+ * form one run.
  * Text between steps shows once every earlier step is revealed, so it never
  * appears ahead of the steps before it. A section that does not start with a
  * run starts with an empty one, which shows only the avatar, as Craft starts
